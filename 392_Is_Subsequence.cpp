@@ -1,4 +1,4 @@
-int count(string s1,string s2,int n,int m)
+/*int count(string s1,string s2,int n,int m)
 {
     int dp[n+1][m+1];
     int i,j;
@@ -38,5 +38,22 @@ public:
             return true;
         else
             return false;
+    }
+};
+*/
+#Easier Way
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+        int n=t.size();
+        int i;
+        int j=0;
+        for(i=0;i<n;i++)
+        {
+            if(s[j]==t[i])
+                j++;
+        }
+        return j==s.size();
+        
     }
 };
